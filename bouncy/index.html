@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Soccer Ball</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="soccer-ball"></canvas>
+    <script>
+        const canvas = document.getElementById('soccer-ball');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const ctx = canvas.getContext('2d');
+
+        const ball = new Image();
+        ball.src = 'ball.png'; // Make sure the image is in the same folder as your Python file
+
+        let x = canvas.width / 2;
+        let y = canvas.height / 2;
+        let dx = 2;
+        let dy = -2;
+
+        function drawBall() {
+            ctx.drawImage(ball, x, y, 50, 50); // Adjust the width and height of the ball as needed
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            drawBall();
+
+            x += dx;
+            y += dy;
+
+            if (x < 0 || x > canvas.width - 50) {
+                dx = -dx;
+            }
+
+            if (y < 0 || y > canvas.height - 50) {
+                dy = -dy;
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
