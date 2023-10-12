@@ -3,18 +3,18 @@ import random
 for _ in range(10):
     r1, r2 = random.randint(0, 100), random.randint(1, 100)
 
-    def add(r1, r2):
-        return r1 + r2
+    def add(a, b):
+        return a + b
 
-    def subtract(r1, r2):
-        return r1 - r2
+    def subtract(a, b):
+        return a - b
 
-    def multiply(r1, r2):
-        return r1 * r2
+    def multiply(a, b):
+        return a * b
 
-    def divide(r1, r2):
-        if r2 != 0 and r1%r2==0:
-            return r1//r2
+    def divide(a, b):
+        if b != 0 and a%b==0:
+            return a//b
         else:
             return "Division by zero is not allowed."
 
