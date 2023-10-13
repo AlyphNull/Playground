@@ -23,5 +23,3 @@ result = total_cost(order)
 
 # Print the result
 print(round(result,2))
-
-
