@@ -1,9 +1,14 @@
-p = int(input())
-c= int(input())
+score=int(input())
+price=int(input())
 
-t= p/12
 
-if t/c>= 1:
-    print("Buy it!")
-else:
-    print ("Try again")
+def can_buy(score, price):
+    tickets = score // 12
+    if tickets >= price:
+        return "Buy it!"
+    else:
+        return "Try again"
+
+# Sample input
+
+print(can_buy(score, price))
