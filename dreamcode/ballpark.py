@@ -1,5 +1,3 @@
-It looks like there are a couple of issues in your code, including the indentation of the `print` statement and a missing `return` statement in the `total_cost` function. Here's the corrected code:
-
 order = input()
 
 def total_cost(order):
@@ -24,6 +22,6 @@ def total_cost(order):
 result = total_cost(order)
 
 # Print the result
-print("Total Cost (including tax):", result)
+print(result)
 
 
