@@ -1,5 +1,6 @@
-order = input()
+It looks like there are a couple of issues in your code, including the indentation of the `print` statement and a missing `return` statement in the `total_cost` function. Here's the corrected code:
 
+order = input()
 
 def total_cost(order):
     # Menu with prices
@@ -14,7 +15,15 @@ def total_cost(order):
     # Calculate the total before tax
     subtotal = sum([menu[item] if item in menu else menu["Coke"] for item in order.split()])
     
-    # Calculate
-result = subtotal*0.07
+    # Calculate the total cost including tax
+    total = subtotal * 1.07  # 7% tax (1.07 is 100% + 7% tax)
+    
+    return total  # Return the total cost
 
-print (result)
+# Call the function and store the result
+result = total_cost(order)
+
+# Print the result
+print("Total Cost (including tax):", result)
+
+
