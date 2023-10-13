@@ -1,4 +1,4 @@
-order = input()
+order = input("What do you want?")
 
 def total_cost(order):
     # Menu with prices
@@ -22,6 +22,6 @@ def total_cost(order):
 result = total_cost(order)
 
 # Print the result
-print(result)
+print(round(result,2))
 
 
